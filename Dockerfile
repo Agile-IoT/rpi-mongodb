@@ -1,7 +1,7 @@
 FROM resin/armv7hf-debian-qemu:latest
 MAINTAINER Chip Dickson <cdickson@sumglobal.com>
 
-RUN [ "cross-build-start" ]
+#RUN [ "cross-build-start" ]
 
 # Install wget, Download MongoDB 3.0.9 ARM build, untar
 RUN apt-get update && apt-get upgrade -y
@@ -34,4 +34,4 @@ EXPOSE 27017
 
 CMD ["/root/run.sh"]
 
-RUN [ "cross-build-end" ]  
+#RUN [ "cross-build-end" ]  
